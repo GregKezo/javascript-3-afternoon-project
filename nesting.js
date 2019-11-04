@@ -80,7 +80,7 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 const removeDuplicates = () => {
   let singles = [];
   workplaceAccidents.forEach( val => {
-    singles.indexOf(val) < 0 ? singles.push(val) : null;
+    singles.indexOf(val) === -1 ? singles.push(val) : null;
   })
   return workplaceAccidents = singles
 }
