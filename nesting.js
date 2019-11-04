@@ -54,8 +54,8 @@ var employees = [
 
 const employeeUpdater = () => {
   employees.forEach((obj, i, arr) => {
-    obj['firstName'] === 'Theo' ? arr.splice(i,1) : null ;
-    obj['firstName'] === 'Lorie' ? obj['department'] = 'HR' : null;
+    obj.firstName === 'Theo' ? arr.splice(i,1) : null ;
+    obj.firstName === 'Lorie' ? obj.department = 'HR' : null;
   })
   return employees
 }
