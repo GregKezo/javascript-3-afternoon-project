@@ -52,6 +52,13 @@ var employees = [
 
 //Code Here
 
+const employeeUpdater = () => {
+  employees.forEach((obj, i, arr) => {
+    obj['firstName'] === 'Theo' ? arr.splice(i,1) : null ;
+    obj['firstName'] === 'Lorie' ? obj['department'] = 'HR' : null;
+  })
+  return employees
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -70,7 +77,13 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
-
+const removeDuplicates = () => {
+  let singles = [];
+  workplaceAccidents.forEach( val => {
+    singles.indexOf(val) < 0 ? singles.push(val) : null;
+  })
+  return workplaceAccidents = singles
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -97,8 +110,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0]['activities'][1];
+var fluffy2ndFriend = cat.catFriends[1]['name'];
 
 
 
@@ -140,6 +153,11 @@ var myCar = {
 
 //Code Here
 
+const recordCleaner = () => {
+  myCar.accidents.forEach( arr => {
+    arr.atFaultForAccident = false
+  })
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -159,4 +177,12 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 //Code Here
 
+const looper = () => {
+  numsArr.forEach( value => {
+    value.forEach( (num, j, arr2) => {
+      num % 2 === 0 ?  arr2[j] = 'even' :  arr2[j] = 'odd'
+      })
+  })
+  return numsArr
+}
 
