@@ -88,7 +88,7 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 //Code Here
-let myStrongest = monstersInYourPocket.filter( mon => mon["CP" ] > 200 )
+let myStrongest = monstersInYourPocket.filter( mon => mon.CP > 200 )
 
 
 
@@ -105,7 +105,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a higher order method to get all the order totals after adding in the sales tax. Your answer should be an array of numbers, one total for each order.
 */
 
-let orderTotals = orders.map( obj => obj["price"] * (1 + obj["tax"]) )
+let orderTotals = orders.map( obj => obj.price * (1 + obj.tax) )
 
 
 
@@ -126,7 +126,7 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 let bobsTotal = purchases
-  .map( obj => obj["owner"] === 'Bob' ? obj["price"] : 0)
+  .map( obj => obj.owner === 'Bob' ? obj.price : 0)
   .reduce( (acc, curr) => acc + curr)
 
 
