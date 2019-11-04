@@ -180,7 +180,9 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 const looper = () => {
   numsArr.forEach( value => {
     value.forEach( (num, j, arr2) => {
-      num % 2 === 0 ?  arr2[j] = 'even' :  arr2[j] = 'odd'
+      num % 2 === 0 
+        ?  arr2[j] = 'even' 
+        :  arr2[j] = 'odd'
       })
   })
   return numsArr
